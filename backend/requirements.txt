@@ -1,0 +1,18 @@
+numpy==1.24.3
+pandas==2.2.0
+# fastapi==0.95.1
+fastapi>=0.100.0,<0.120.0
+uvicorn==0.22.0
+sqlalchemy==2.0.12
+psycopg2-binary==2.9.6
+# pydantic>=1.10.0,<2.0.0
+pydantic>=2.0.0,<3.0.0
+python-multipart==0.0.6
+openpyxl==3.1.2
+python-dotenv==1.0.0
+cors==1.0.1
+xlsxwriter==3.1.0
+pyodbc==5.1.0
+pypyodbc==1.2.1
+# google-genai<0.5.0
+google-genai==0.6.0

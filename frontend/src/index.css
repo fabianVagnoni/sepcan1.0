@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #003366;
+  background-color: #f5f5f5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Maritime theme colors */
+  --text-primary: #003366;
+  --text-secondary: #006994;
+  --text-light: #4FC3F7;
+  --background-light: #F5F5F5;
+  --accent-light: #E3F2FD;
+  --accent-dark: #01579B;
+  --coral: #FF7F50;
+  --seafoam: #98FF98;
+
+  /* Spacing variables */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 2.5rem;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 51, 102, 0.1);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--navy-blue), var(--ocean-blue));
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--ocean-blue), var(--wave-blue));
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-shadow: 0 0 8px rgba(79, 195, 247, 0.3);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--wave-blue), var(--seafoam));
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-light);
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-primary);
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--spacing-lg);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.2;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing-xl);
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--wave-blue), var(--seafoam), var(--wave-blue));
+  border-radius: 2px;
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1em;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: var(--spacing-md);
+  letter-spacing: 0.02em;
+  min-width: 120px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.2);
+  background: linear-gradient(135deg, var(--text-secondary), var(--wave-blue));
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-xxl);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(227, 242, 253, 0.9));
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 51, 102, 0.1);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 51, 102, 0.15);
+}
+
+.form-section {
+  margin-bottom: var(--spacing-xxl);
+  position: relative;
+  padding: var(--spacing-xl);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent-light), rgba(255, 255, 255, 0.9));
+  border: 1px solid rgba(0, 51, 102, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-xxl);
+  margin-top: var(--spacing-xxl);
+  padding-top: var(--spacing-xl);
+  border-top: 2px solid var(--accent-light);
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.form-actions::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--wave-blue), var(--seafoam), var(--wave-blue));
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.page-title {
+  margin-bottom: var(--spacing-xxl);
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+  font-size: 2.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s ease;
+  display: block;
+  position: relative;
+}
+
+.card-link:hover {
+  transform: translateY(-8px);
+}
+
+.card-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(79, 195, 247, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card-link:hover::before {
+  opacity: 1;
+}
+
+.dashboard-container {
+  padding: 2.5rem;
+  position: relative;
+  perspective: 1000px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Responsive adjustments with enhanced mobile styles */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .page-title {
+    font-size: 2em;
+  }
+}
+
+/* Add loading animation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Add floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Typography styles for content */
+p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  display: block;
+}
+
+input, textarea, select {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 51, 102, 0.2);
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--text-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 105, 148, 0.1);
+}
+
+/* Add styles for button groups */
+.button-group {
+  display: flex;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Footer styles */
+.footer {
+  background: white;
+  color: var(--text-primary);
+  padding: var(--spacing-xl) 0;
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -4px 20px rgba(0, 51, 102, 0.1);
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--text-primary), var(--text-secondary), var(--text-primary));
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+.copyright {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  color: var(--text-primary);
+  text-align: center;
+  padding: var(--spacing-md);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.copyright::before {
+  content: '©';
+  font-size: 1.2em;
+  margin-right: var(--spacing-xs);
+  color: var(--text-secondary);
+}
+
+/* Main content wrapper to push footer to bottom */
+.main-content {
+  flex: 1 0 auto;
+  padding-bottom: var(--spacing-xxl);
+}
+
+/* Update responsive styles */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-md);
+  }
+
+  .copyright {
+    justify-content: center;
+  }
+
+  .form-actions {
+    gap: var(--spacing-lg);
+  }
+
+  button {
+    width: 100%;
+    margin: var(--spacing-xs);
+  }
+}
+
+/* Navbar styles */
+.MuiAppBar-root {
+  background: white !important;
+  box-shadow: 0 4px 20px rgba(0, 51, 102, 0.2) !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar buttons */
+.MuiAppBar-root .MuiButton-root {
+  color: var(--navy-blue) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  padding: var(--spacing-md) var(--spacing-lg) !important;
+  min-width: auto !important;
+  margin: 0 var(--spacing-xs) !important;
+  border: none !important;
+  background: transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiAppBar-root .MuiButton-root:hover {
+  color: var(--wave-blue) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Dropdown menu styles */
+.MuiMenu-paper {
+  margin-top: var(--spacing-xs) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(0, 51, 102, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 51, 102, 0.1) !important;
+}
+
+.MuiMenuItem-root {
+  padding: var(--spacing-sm) var(--spacing-lg) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: rgba(0, 51, 102, 0.04) !important;
+}
+
+/* Remove default button effects */
+.MuiAppBar-root .MuiButton-root::before,
+.MuiAppBar-root .MuiButton-root::after {
+  display: none !important;
+}
+
+/* IconButton styles */
+.MuiIconButton-root {
+  background: white !important;
+  margin: 0 !important;
+  min-width: auto !important;
+  padding: 8px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+.MuiIconButton-root:hover {
+  background: #f5f5f5 !important;
+  transform: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiIconButton-root::before {
+  display: none !important;
+}
+
+/* MUI Button styles */
+.MuiButton-containedPrimary {
+  background: linear-gradient(135deg, var(--navy-blue), var(--ocean-blue)) !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  padding: 8px 22px !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  box-shadow: 0 2px 4px rgba(0, 51, 102, 0.2) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  letter-spacing: 0.02em !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  background: linear-gradient(135deg, var(--ocean-blue), var(--wave-blue)) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 12px rgba(0, 51, 102, 0.3) !important;
+}
+
+.MuiButton-containedPrimary::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: 0.5s !important;
+}
+
+.MuiButton-containedPrimary:hover::before {
+  left: 100% !important;
+}
+
+/* Navbar strip styling */
+.navbar-strip {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--navy-blue), var(--ocean-blue), var(--wave-blue), var(--ocean-blue), var(--navy-blue));
+  background-size: 200% 100%;
+  animation: shimmer 8s linear infinite;
+  position: relative;
+}
+
+.navbar-strip::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 51, 102, 0.2);
+}
+
+/* Header area styling */
+.app-header {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 51, 102, 0.1);
+}
+
+/* Add @media query for responsive design */
+@media (min-width: 600px) {
+  .navbar-strip {
+    height: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-strip {
+    height: 8px;
+  }
+}
