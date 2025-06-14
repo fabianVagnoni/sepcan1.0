@@ -2,9 +2,9 @@
 
 <!-- Language Toggles -->
 <div align="center">
-
 <details open>
 <summary><strong>🇪🇸 Español</strong></summary>
+</div>
 
 ### 📋 Descripción
 
@@ -245,8 +245,10 @@ npm run test
 
 </details>
 
+<div align="center">
 <details>
 <summary><strong>🇬🇧 English</strong></summary>
+</div>
 
 ### 📋 Description
 
@@ -486,5 +488,3 @@ npm run test
 - `DatosPrivadosTrabajos.tsx` - Job CRUD
 
 </details>
-
-</div>

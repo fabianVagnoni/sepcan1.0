@@ -2,9 +2,9 @@
 
 <!-- Language Toggles -->
 <div align="center">
-
 <details open>
 <summary><strong>🇪🇸 Español</strong></summary>
+</div>
 
 ## 📋 Descripción del Proyecto
 
@@ -162,8 +162,10 @@ Este proyecto es propietario de SEPCAN MARINA.
 
 </details>
 
+<div align="center">
 <details>
 <summary><strong>🇬🇧 English</strong></summary>
+</div>
 
 ## 📋 Project Description
 
@@ -320,6 +322,4 @@ See configuration files in `.github/workflows/`
 This project is proprietary to SEPCAN MARINA.
 
 </details>
-
-</div>
 

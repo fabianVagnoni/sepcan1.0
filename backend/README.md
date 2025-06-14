@@ -2,9 +2,9 @@
 
 <!-- Language Toggles -->
 <div align="center">
-
 <details open>
 <summary><strong>🇪🇸 Español</strong></summary>
+</div>
 
 ### 📋 Descripción
 
@@ -249,8 +249,10 @@ pytest
 
 </details>
 
+<div align="center">
 <details>
 <summary><strong>🇬🇧 English</strong></summary>
+</div>
 
 ### 📋 Description
 
@@ -493,6 +495,4 @@ pip install pytest httpx
 pytest
 ```
 
-</details>
-
-</div> 
+</details> 
