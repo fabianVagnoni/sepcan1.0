@@ -1,13 +1,10 @@
 # SEPCAN MARINA - Backend API
 
-<!-- Language Selection -->
+<!-- Language Toggles -->
 <div align="center">
-<a href="#español">🇪🇸 Español</a> | <a href="#english">🇬🇧 English</a>
-</div>
 
----
-
-## Español
+<details open>
+<summary><strong>🇪🇸 Español</strong></summary>
 
 ### 📋 Descripción
 
@@ -250,9 +247,10 @@ pip install pytest httpx
 pytest
 ```
 
----
+</details>
 
-## English
+<details>
+<summary><strong>🇬🇧 English</strong></summary>
 
 ### 📋 Description
 
@@ -493,4 +491,8 @@ pip install pytest httpx
 
 # Run tests (when available)
 pytest
-``` 
+```
+
+</details>
+
+</div> 

@@ -1,19 +1,16 @@
 # SEPCAN MARINA - Sistema de Gestión de Operaciones
 
-<!-- Language Selection -->
+<!-- Language Toggles -->
 <div align="center">
-<a href="#español">🇪🇸 Español</a> | <a href="#english">🇬🇧 English</a>
-</div>
 
----
+<details open>
+<summary><strong>🇪🇸 Español</strong></summary>
 
-## Español
-
-### 📋 Descripción del Proyecto
+## 📋 Descripción del Proyecto
 
 SEPCAN MARINA es un sistema integral de gestión de operaciones diseñado para empresas de servicios que utilizan vehículos. El sistema permite gestionar formularios de vehículos, trabajos realizados, incidencias, y generar reportes exportables.
 
-### 🏗️ Arquitectura del Sistema
+## 🏗️ Arquitectura del Sistema
 
 El proyecto está desplegado en **Microsoft Azure** con la siguiente arquitectura:
 
@@ -25,7 +22,7 @@ Backend (Azure Web App - FastAPI)
 Base de Datos (Azure SQL Database)
 ```
 
-### 🚀 Tecnologías Utilizadas
+## 🚀 Tecnologías Utilizadas
 
 **Frontend:**
 - React 18 + TypeScript
@@ -52,12 +49,12 @@ Base de Datos (Azure SQL Database)
 - Azure Static Web Apps
 - Azure Web Apps
 
-### 📊 Modelo de Base de Datos
+## 📊 Modelo de Base de Datos
 
 El sistema utiliza un modelo de base de datos relacional optimizado. Consulta el diagrama ER en:
 - 📁 [`/design/Sepcan_Marina_ER_Model.jpg`](./design/Sepcan_Marina_ER_Model.jpg)
 
-### 🎯 Funcionalidades Principales
+## 🎯 Funcionalidades Principales
 
 1. **📝 Gestión de Formularios**
    - Formularios de recogida de vehículos
@@ -79,7 +76,7 @@ El sistema utiliza un modelo de base de datos relacional optimizado. Consulta el
    - Autenticación por contraseña
    - Interfaz administrativa
 
-### 📁 Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
 ```
 sepcan1.0/
@@ -90,14 +87,14 @@ sepcan1.0/
 └── README.md         # Este archivo
 ```
 
-### 🛠️ Instalación y Desarrollo
+## 🛠️ Instalación y Desarrollo
 
-#### Requisitos Previos
+### Requisitos Previos
 - Node.js 18+
 - Python 3.9+
 - Azure SQL Database
 
-#### Configuración Local
+### Configuración Local
 
 1. **Clonar el repositorio:**
 ```bash
@@ -120,7 +117,7 @@ npm install
 npm run dev
 ```
 
-### 🌐 Variables de Entorno
+## 🌐 Variables de Entorno
 
 **Backend (.env):**
 ```env
@@ -136,7 +133,7 @@ GEMMA_KEY=tu_clave_gemini_ai
 VITE_APP_ACCESS_PASSWORD=tu_contraseña_acceso
 ```
 
-### 🚀 Despliegue en Azure
+## 🚀 Despliegue en Azure
 
 El proyecto utiliza GitHub Actions para despliegue automático:
 
@@ -146,12 +143,12 @@ El proyecto utiliza GitHub Actions para despliegue automático:
 
 Ver archivos de configuración en `.github/workflows/`
 
-### 📖 Documentación Detallada
+## 📖 Documentación Detallada
 
 - **Backend:** [backend/README.md](./backend/README.md)
 - **Frontend:** [frontend/README.md](./frontend/README.md)
 
-### 🤝 Contribución
+## 🤝 Contribución
 
 1. Fork del proyecto
 2. Crear rama feature (`git checkout -b feature/nueva-funcionalidad`)
@@ -159,19 +156,20 @@ Ver archivos de configuración en `.github/workflows/`
 4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
 5. Crear Pull Request
 
-### 📄 Licencia
+## 📄 Licencia
 
 Este proyecto es propietario de SEPCAN MARINA.
 
----
+</details>
 
-## English
+<details>
+<summary><strong>🇬🇧 English</strong></summary>
 
-### 📋 Project Description
+## 📋 Project Description
 
 SEPCAN MARINA is a comprehensive operations management system designed for service companies that use vehicles. The system allows managing vehicle forms, completed jobs, incidents, and generating exportable reports.
 
-### 🏗️ System Architecture
+## 🏗️ System Architecture
 
 The project is deployed on **Microsoft Azure** with the following architecture:
 
@@ -183,7 +181,7 @@ Backend (Azure Web App - FastAPI)
 Database (Azure SQL Database)
 ```
 
-### 🚀 Technologies Used
+## 🚀 Technologies Used
 
 **Frontend:**
 - React 18 + TypeScript
@@ -210,12 +208,12 @@ Database (Azure SQL Database)
 - Azure Static Web Apps
 - Azure Web Apps
 
-### 📊 Database Model
+## 📊 Database Model
 
 The system uses an optimized relational database model. Check the ER diagram at:
 - 📁 [`/design/Sepcan_Marina_ER_Model.jpg`](./design/Sepcan_Marina_ER_Model.jpg)
 
-### 🎯 Main Features
+## 🎯 Main Features
 
 1. **📝 Form Management**
    - Vehicle pickup forms
@@ -237,7 +235,7 @@ The system uses an optimized relational database model. Check the ER diagram at:
    - Password authentication
    - Administrative interface
 
-### 📁 Project Structure
+## 📁 Project Structure
 
 ```
 sepcan1.0/
@@ -248,14 +246,14 @@ sepcan1.0/
 └── README.md         # This file
 ```
 
-### 🛠️ Installation and Development
+## 🛠️ Installation and Development
 
-#### Prerequisites
+### Prerequisites
 - Node.js 18+
 - Python 3.9+
 - Azure SQL Database
 
-#### Local Setup
+### Local Setup
 
 1. **Clone repository:**
 ```bash
@@ -278,7 +276,7 @@ npm install
 npm run dev
 ```
 
-### 🌐 Environment Variables
+## 🌐 Environment Variables
 
 **Backend (.env):**
 ```env
@@ -294,7 +292,7 @@ GEMMA_KEY=your_gemini_ai_key
 VITE_APP_ACCESS_PASSWORD=your_access_password
 ```
 
-### 🚀 Azure Deployment
+## 🚀 Azure Deployment
 
 The project uses GitHub Actions for automatic deployment:
 
@@ -304,12 +302,12 @@ The project uses GitHub Actions for automatic deployment:
 
 See configuration files in `.github/workflows/`
 
-### 📖 Detailed Documentation
+## 📖 Detailed Documentation
 
 - **Backend:** [backend/README.md](./backend/README.md)
 - **Frontend:** [frontend/README.md](./frontend/README.md)
 
-### 🤝 Contributing
+## 🤝 Contributing
 
 1. Fork the project
 2. Create feature branch (`git checkout -b feature/new-feature`)
@@ -317,7 +315,11 @@ See configuration files in `.github/workflows/`
 4. Push to branch (`git push origin feature/new-feature`)
 5. Create Pull Request
 
-### 📄 License
+## 📄 License
 
 This project is proprietary to SEPCAN MARINA.
+
+</details>
+
+</div>
 

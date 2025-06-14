@@ -1,13 +1,10 @@
 # SEPCAN MARINA - Frontend Application
 
-<!-- Language Selection -->
+<!-- Language Toggles -->
 <div align="center">
-<a href="#español">🇪🇸 Español</a> | <a href="#english">🇬🇧 English</a>
-</div>
 
----
-
-## Español
+<details open>
+<summary><strong>🇪🇸 Español</strong></summary>
 
 ### 📋 Descripción
 
@@ -246,9 +243,10 @@ npm run test
 - `DatosPrivadosTrabajadores.tsx` - CRUD de trabajadores
 - `DatosPrivadosTrabajos.tsx` - CRUD de trabajos
 
----
+</details>
 
-## English
+<details>
+<summary><strong>🇬🇧 English</strong></summary>
 
 ### 📋 Description
 
@@ -486,3 +484,7 @@ npm run test
 - `DatosPrivadosCoches.tsx` - Vehicle CRUD
 - `DatosPrivadosTrabajadores.tsx` - Worker CRUD
 - `DatosPrivadosTrabajos.tsx` - Job CRUD
+
+</details>
+
+</div>
