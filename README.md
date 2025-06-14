@@ -1,10 +1,8 @@
 # SEPCAN MARINA - Sistema de Gestión de Operaciones
 
 <!-- Language Toggles -->
-<div align="center">
 <details open>
-<summary><strong>🇪🇸 Español</strong></summary>
-</div>
+<summary align="center"><strong>🇪🇸 Español</strong></summary>
 
 ## 📋 Descripción del Proyecto
 
@@ -162,10 +160,8 @@ Este proyecto es propietario de SEPCAN MARINA.
 
 </details>
 
-<div align="center">
 <details>
-<summary><strong>🇬🇧 English</strong></summary>
-</div>
+<summary align="center"><strong>🇬🇧 English</strong></summary>
 
 ## 📋 Project Description
 

@@ -1,10 +1,8 @@
 # SEPCAN MARINA - Backend API
 
 <!-- Language Toggles -->
-<div align="center">
 <details open>
-<summary><strong>🇪🇸 Español</strong></summary>
-</div>
+<summary align="center"><strong>🇪🇸 Español</strong></summary>
 
 ### 📋 Descripción
 
@@ -249,10 +247,8 @@ pytest
 
 </details>
 
-<div align="center">
 <details>
-<summary><strong>🇬🇧 English</strong></summary>
-</div>
+<summary align="center"><strong>🇬🇧 English</strong></summary>
 
 ### 📋 Description
 
